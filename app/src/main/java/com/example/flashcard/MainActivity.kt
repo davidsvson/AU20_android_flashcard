@@ -59,6 +59,8 @@ class MainActivity : AppCompatActivity() , CoroutineScope {
 
 
     fun addNewWord(word : Word) {
+        wordList?.addWord(word)
+
         launch(Dispatchers.IO) {
             db.wordDao.insert(word)
         }
@@ -66,6 +68,9 @@ class MainActivity : AppCompatActivity() , CoroutineScope {
 
     fun loadNewWord() {
         currentWord = wordList?.getNewWord()
+
+        if (currentWord == null)
+            return
 
         textView.text = currentWord?.english
     }

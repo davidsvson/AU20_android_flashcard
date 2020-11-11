@@ -1,7 +1,7 @@
 package com.example.flashcard
 
 class WordList(private val words : MutableList<Word>) {
-
+/*
     init {
         initialize()
     }
@@ -14,10 +14,17 @@ class WordList(private val words : MutableList<Word>) {
         words.add(Word("Thank you", "Tack"))
         words.add(Word("Welcome", "Välkommen")) */
     }
+    */
 
-    fun getNewWord() : Word {
+    fun addWord(word: Word) {
+        words.add(word)
+    }
+
+
+    fun getNewWord() : Word? {
         if (words.size <= 0) {
-            initialize()
+            return null
+           // initialize()
         }
         val rnd = (0 until words.size).random()
         val word = words.removeAt(rnd)
