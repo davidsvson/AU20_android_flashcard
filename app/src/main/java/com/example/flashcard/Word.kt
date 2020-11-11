@@ -9,3 +9,5 @@ data class Word(@PrimaryKey(autoGenerate = true) val id: Int,
            @ColumnInfo(name = "english") var english: String,
            @ColumnInfo(name = "swedish") var swedish: String)
 
+
+

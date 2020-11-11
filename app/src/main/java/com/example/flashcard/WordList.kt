@@ -1,18 +1,18 @@
 package com.example.flashcard
 
-class WordList() {
-    private val words = mutableListOf<Word>()
+class WordList(private val words : MutableList<Word>) {
 
     init {
         initialize()
     }
 
+
     private fun initialize() {
-        var word = Word("Hello", "Hej")
+   /*     var word = Word("Hello", "Hej")
         words.add(word)
         words.add(Word("Good bye", "Hej då"))
         words.add(Word("Thank you", "Tack"))
-        words.add(Word("Welcome", "Välkommen"))
+        words.add(Word("Welcome", "Välkommen")) */
     }
 
     fun getNewWord() : Word {
